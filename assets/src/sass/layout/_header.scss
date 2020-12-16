@@ -1,0 +1,61 @@
+// Here is your main header stylings. You can modify all other, but in general
+// try to keep the header stylings in here.
+//
+// Menu stylings file be found in components/mobile-menu
+
+.header-wrapper {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.site-branding {
+	width: 10em;
+}
+
+.site-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.875em;
+	width: 100%;
+}
+
+.nav {
+	&-main-item,
+	&-side-item {
+		list-style-type: none;
+	}
+
+	&-main {
+		&-item a {
+			font-size: 1em;
+			color: #000;
+			padding: 1em;
+			display: inline-block;
+		}
+	}
+
+	&-side {
+		&-item a {
+			font-size: 0.875em;
+			color: rgba(0, 0, 0, 0.6);
+			padding: 1em;
+			display: inline-block;
+		}
+
+		&-item:last-child a {
+			color: #fff;
+			background: #e41c38;
+			padding: 0.5em 0.75em;
+			border-radius: 5px;
+			font-weight: 600;
+		}
+	}
+
+	&-items {
+		display: flex;
+		align-items: center;
+	}
+}

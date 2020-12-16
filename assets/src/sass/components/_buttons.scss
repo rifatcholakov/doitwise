@@ -1,0 +1,39 @@
+.btn {
+	border-radius: 5px;
+	font-weight: 700;
+	font-size: 1.25em;
+	border: 0;
+	padding: 1em 2.25em;
+
+	&-default {
+		@extend .btn;
+		background: #e6edfa;
+		color: #1e3158;
+	}
+
+	&-danger {
+		@extend .btn;
+		background: #e41c38;
+		color: #fff;
+	}
+
+	&-transparent {
+		@extend .btn;
+		color: #e41c38;
+		background: transparent;
+		border: 1px solid #dddddd;
+		font-size: 1em;
+		padding: 1em;
+
+		.fa-arrow-right {
+			color: #000;
+			margin-left: 1em;
+		}
+	}
+
+	&-solution {
+		@extend .btn-danger;
+		padding: 0.875em;
+		font-size: 1em;
+	}
+}
