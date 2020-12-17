@@ -53,3 +53,45 @@
 		}
 	}
 }
+
+.section-intro {
+	background-image: url("/assets/dist/images/intro.svg");
+	background-repeat: no-repeat;
+	background-position: right;
+	border-bottom: 1px solid #dddddd;
+
+	.intro-wrapper {
+		min-height: 50em;
+		display: flex;
+		align-items: center;
+	}
+
+	.copy {
+		max-width: 45em;
+
+		&-text {
+			font-weight: 500;
+			font-size: 3.5em;
+			line-height: 1.1;
+			color: $color-secondary;
+		}
+
+		&-ctl {
+			margin-top: 6.25em;
+		}
+	}
+
+	.button-primary,
+	.button-primary-light {
+		margin-right: 0.5625em;
+	}
+}
+
+.section-core-solutions {
+	.button-ghost {
+		.fa-arrow-right {
+			color: #000;
+			margin-left: 1em;
+		}
+	}
+}

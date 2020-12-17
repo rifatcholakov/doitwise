@@ -1,39 +1,33 @@
-.btn {
-	border-radius: 5px;
+.button {
+	border-radius: 0.313em;
 	font-weight: 700;
 	font-size: 1.25em;
 	border: 0;
 	padding: 1em 2.25em;
+	display: inline-block;
 
-	&-default {
-		@extend .btn;
-		background: #e6edfa;
-		color: #1e3158;
+	&:hover {
+		cursor: pointer;
 	}
 
-	&-danger {
-		@extend .btn;
-		background: #e41c38;
+	&-small {
+		padding: 0.75em 1.125em;
+	}
+
+	&-primary {
+		background: $color-primary;
 		color: #fff;
-	}
 
-	&-transparent {
-		@extend .btn;
-		color: #e41c38;
-		background: transparent;
-		border: 1px solid #dddddd;
-		font-size: 1em;
-		padding: 1em;
-
-		.fa-arrow-right {
-			color: #000;
-			margin-left: 1em;
+		&-light {
+			background: #e6edfa;
+			color: $color-secondary;
 		}
 	}
 
-	&-solution {
-		@extend .btn-danger;
-		padding: 0.875em;
-		font-size: 1em;
+	&-ghost {
+		color: $color-primary;
+		background: transparent;
+		border: 0.063em solid #dddddd;
+		padding: 1em;
 	}
 }
