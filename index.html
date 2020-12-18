@@ -13,9 +13,11 @@
     <header class="site-header">
         <div class="row">
             <div class="columns">
-                <div class="header-wrapper">
+                <div class="site-header-inner">
                     <div class="site-branding">
-                        <img src="/assets/dist//images/logo.svg" alt="logo">
+                        <a href="#">
+                            <img src="/assets/dist/images/logo.svg" alt="logo">
+                        </a>
                     </div>
                     <nav class="site-nav">
                         <div class="nav-main">
@@ -30,7 +32,8 @@
                             <ul class="nav-items">
                                 <li class="nav-side-item"><a href="#">News</a></li>
                                 <li class="nav-side-item"><a href="#">About Do IT Wise</a></li>
-                                <li class="nav-side-item"><a href="#">Get in touch</a></li>
+                                <li class="nav-side-item"><a class="button button-primary" href="#">Get in touch</a>
+                                </li>
                             </ul>
                         </div>
                     </nav>
@@ -38,19 +41,17 @@
             </div>
         </div>
     </header>
-    <section class="section-fullwidth section-intro">
+    <section class="section-fullwidth section-intro"
+        style="background-image: url('/assets/dist/images/intro.svg'); background-repeat: no-repeat; background-position: right;">
         <div class="row">
             <div class="columns">
-                <div class="intro-wrapper">
-                    <div class="copy">
-                        <h1 class="copy-text">We Help Modern Organizations Run Their Business Efficiently Through
-                            <strong>Digital
-                                Transformation</strong>
-                        </h1>
-                        <div class="copy-ctl">
-                            <a class="button button-primary">Solutions</a>
-                            <a class="button button-primary-light">Industries</a>
-                        </div>
+                <div class="copy">
+                    <h1 class="copy-text">We Help Modern Organizations Run Their Business Efficiently Through
+                        <strong>Digital Transformation</strong>
+                    </h1>
+                    <div class="copy-ctl">
+                        <a class="button button-primary button-large">Solutions</a>
+                        <a class="button button-primary-light button-large">Industries</a>
                     </div>
                 </div>
             </div>
@@ -59,23 +60,25 @@
     <section class="section-fullwidth section-core-solutions">
         <div class="row">
             <div class="columns">
-                <div class="section-header">
-                    <div class="core-solution-subheader">
+                <div class="section-heading">
+                    <div class="heading-primary">
                         <h2 class="heading-title">Core Solutions</h2>
-                        <span class="heading-description">Bundle the best you need</span>
+                        <span class="heading-description">Bundle the best you needs</span>
                     </div>
-                    <button class="button button-ghost">All Solutions <i class="fas fa-arrow-right"></i></button>
+                    <div class="heading-secondary">
+                        <button class="button button-ghost">All Solutions <i class="fas fa-arrow-right"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="columns">
+            <div class="columns medmium-6 large-6">
                 <div class="box-featured">
-                    <div class="featured-img-wrapper">
+                    <div class="box-featured-visual">
                         <img src="/assets/dist/images/core-solutions-1.jpg" alt="solution">
                         <div class="img-overlay"></div>
                         <div class="meta">
-                            <h4 class="meta-title">5X</h4>
+                            <h4 class="meta-title">5x</h4>
                             <span class="meta-subtitle">Cost Savings</span>
                             <a href="#" class="meta-link">Read our case study</a>
                             <span class="meta-description">to find out why</span>
@@ -87,13 +90,13 @@
                             consulting
                             and based on industry best practices and frameworks, such
                             as ITIL and</p>
-                        <a class="button button-primary button-small">Find out more</a>
+                        <a class="button button-primary">Find out more</a>
                     </div>
                 </div>
             </div>
-            <div class="columns">
+            <div class="columns medmium-6 large-6">
                 <div class="box-featured">
-                    <div class="featured-img-wrapper">
+                    <div class="box-featured-visual">
                         <img src="/assets/dist/images/core-solutions-2.jpg" alt="solution">
                         <div class="img-overlay"></div>
                         <div class="meta">
@@ -109,7 +112,7 @@
                             consulting
                             and based on industry best practices and frameworks, such
                             as ITIL and</p>
-                        <a class="button button-primary button-small">Find out more</a>
+                        <a class="button button-primary ">Find out more</a>
                     </div>
                 </div>
             </div>
@@ -117,52 +120,60 @@
         <div class="row">
             <div class="columns">
                 <div class="box-mini">
-                    <div class="box-mini-title">
-                        <i class="fas fa-plus"></i>
-                        <h4>DevOps</h4>
+                    <header class="box-mini-header">
+                        <i class="fas fa-plus heading-icon"></i>
+                        <h4 class="heading-title">DevOps</h4>
+                    </header>
+                    <div class="box-mini-content">
+                        <p>In a Hybrid IT world, you seldom run your business on a
+                            single platform. Enabled by our
+                            unique Integration</p>
                     </div>
-                    <p class="box-mini-description">In a Hybrid IT world, you seldom run your business on a
-                        single platform. Enabled by our
-                        unique Integration</p>
                     <a href="#" class="box-mini-link"><i class="fas fa-caret-square-right"></i> More
                         Details</a>
                 </div>
             </div>
             <div class="columns">
                 <div class="box-mini">
-                    <div class="box-mini-title">
-                        <i class="fas fa-plus"></i>
-                        <h4>CSM</h4>
+                    <header class="box-mini-header">
+                        <i class="fas fa-plus heading-icon"></i>
+                        <h4 class="heading-title">CSM</h4>
+                    </header>
+                    <div class="box-mini-content">
+                        <p>In a Hybrid IT world, you seldom run your business on a
+                            single platform. Enabled by our
+                            unique Integration</p>
                     </div>
-                    <p class="box-mini-description">In a Hybrid IT world, you seldom run your business on a
-                        single platform. Enabled by our
-                        unique Integration</p>
                     <a href="#" class="box-mini-link"><i class="fas fa-caret-square-right"></i> More
                         Details</a>
                 </div>
             </div>
             <div class="columns">
                 <div class="box-mini">
-                    <div class="box-mini-title">
-                        <i class="fas fa-plus"></i>
-                        <h4>SecOps</h4>
+                    <header class="box-mini-header">
+                        <i class="fas fa-plus heading-icon"></i>
+                        <h4 class="heading-title">SecOps</h4>
+                    </header>
+                    <div class="box-mini-content">
+                        <p>In a Hybrid IT world, you seldom run your business on a
+                            single platform. Enabled by our
+                            unique Integration</p>
                     </div>
-                    <p class="box-mini-description">In a Hybrid IT world, you seldom run your business on a
-                        single platform. Enabled by our
-                        unique Integration</p>
                     <a href="#" class="box-mini-link"><i class="fas fa-caret-square-right"></i> More
                         Details</a>
                 </div>
             </div>
             <div class="columns">
                 <div class="box-mini">
-                    <div class="box-mini-title">
-                        <i class="fas fa-plus"></i>
-                        <h4>Intelligent Apps</h4>
+                    <header class="box-mini-header">
+                        <i class="fas fa-plus heading-icon"></i>
+                        <h4 class="heading-title">Intelligent Apps</h4>
+                    </header>
+                    <div class="box-mini-content">
+                        <p>In a Hybrid IT world, you seldom run your business on a
+                            single platform. Enabled by our
+                            unique Integration</p>
                     </div>
-                    <p class="box-mini-description">In a Hybrid IT world, you seldom run your business on a
-                        single platform. Enabled by our
-                        unique Integration</p>
                     <a href="#" class="box-mini-link"><i class="fas fa-caret-square-right"></i> More
                         Details</a>
                 </div>

@@ -55,17 +55,14 @@
 }
 
 .section-intro {
-	background-image: url("/assets/dist/images/intro.svg");
-	background-repeat: no-repeat;
-	background-position: right;
-	border-bottom: 1px solid #dddddd;
+	border-bottom: 1px solid $color-tetra;
+	display: flex;
+	align-items: center;
+	min-height: 50em;
 
-	.intro-wrapper {
-		min-height: 50em;
-		display: flex;
-		align-items: center;
+	.row {
+		width: 100%;
 	}
-
 	.copy {
 		max-width: 45em;
 

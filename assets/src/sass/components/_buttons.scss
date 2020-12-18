@@ -1,17 +1,15 @@
 .button {
 	border-radius: 0.313em;
 	font-weight: 700;
-	font-size: 1.25em;
 	border: 0;
-	padding: 1em 2.25em;
+	padding: 0.75em 1.125em;
+	color: #fff;
+	font-size: 1em;
+
 	display: inline-block;
 
 	&:hover {
 		cursor: pointer;
-	}
-
-	&-small {
-		padding: 0.75em 1.125em;
 	}
 
 	&-primary {
@@ -27,7 +25,12 @@
 	&-ghost {
 		color: $color-primary;
 		background: transparent;
-		border: 0.063em solid #dddddd;
+		border: 1px solid $color-tetra;
 		padding: 1em;
+	}
+
+	&-large {
+		padding: 1em 2.25em;
+		font-size: 1.25em;
 	}
 }
