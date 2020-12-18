@@ -5182,9 +5182,9 @@ readers do not read off random characters that represent icons */
   .button-primary {
     background: #e41c38;
     color: #fff; }
-    .button-primary-light {
-      background: #e6edfa;
-      color: #1e3158; }
+  .button-secondary-light {
+    background: #e6edfa;
+    color: #1e3158; }
   .button-ghost {
     color: #e41c38;
     background: transparent;
