@@ -29,5 +29,6 @@ jQuery(document).ready(function ($) {
 		navigation.classList.toggle("open");
 		buttonMobileIcon.classList.toggle("fa-bars");
 		buttonMobileIcon.classList.toggle("fa-times");
+		document.querySelector("body").classList.toggle("overflow");
 	});
 });

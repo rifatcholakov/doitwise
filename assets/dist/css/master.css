@@ -5218,11 +5218,12 @@ readers do not read off random characters that represent icons */
   .nav-side-item:first-child {
     border-top: 1px solid #dddddd; }
   .nav-side .button {
-    margin: 10px; }
+    margin: 10px;
+    margin-bottom: 1.5em; }
   .open {
     display: flex; }
-  .close {
-    display: block; } }
+  .overflow {
+    overflow: hidden; } }
 
 .button {
   border-radius: 0.313em;

@@ -123,13 +123,14 @@
 
 	.nav-side .button {
 		margin: $global-layout-gutter / 2;
+		margin-bottom: 1.5em;
 	}
 
 	.open {
 		display: flex;
 	}
 
-	.close {
-		display: block;
+	.overflow {
+		overflow: hidden;
 	}
 }
