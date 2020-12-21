@@ -16,9 +16,13 @@
 
 .site-nav {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
+	justify-content: space-between; //no
+	align-items: center; // no
+	width: 100%; // no
+}
+
+.nav-mobile {
+	display: none;
 }
 
 .nav {
@@ -56,5 +60,68 @@
 	&-items {
 		display: flex;
 		align-items: center;
+	}
+}
+
+@media all and (max-width: $breakpoint-medium) {
+	.site-header {
+		position: relative;
+	}
+
+	.site-nav {
+		flex-flow: wrap;
+		flex-direction: column;
+	}
+
+	.nav-mobile {
+		display: inline-block;
+		padding: 0.75em;
+	}
+
+	.site-nav {
+		position: absolute;
+		background: #fff;
+		width: 100vw;
+		height: calc(100vh - 36px);
+		top: 100%;
+		left: 0;
+		z-index: 100;
+		display: none;
+		animation: fadeIn ease 0.2s;
+	}
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	.nav-main,
+	.nav-side {
+		width: 100%;
+		.nav-items {
+			display: block;
+		}
+	}
+
+	.nav-main-item a,
+	.nav-side-item a {
+		display: block;
+		padding: $global-layout-gutter / 2;
+	}
+
+	.nav-side-item:first-child {
+		border-top: 1px solid $color-tetra;
+	}
+
+	.nav-side .button {
+		margin: $global-layout-gutter / 2;
+	}
+
+	.open {
+		display: flex;
 	}
 }

@@ -1,5 +1,6 @@
-jQuery( document ).ready( function ( $ ) {
-	'use strict';
+jQuery(document).ready(function ($) {
+	"use strict";
+
 	/*
 	|--------------------------------------------------------------------------
 	| Developer mode
@@ -10,12 +11,20 @@ jQuery( document ).ready( function ( $ ) {
 	| Id needed for development testing this variable should be used.
 	|
 	*/
-	const devMode = function() {
+	const devMode = function () {
 		return true;
 	};
 
 	// Disable console.log for production site.
-	if ( ! devMode() ) {
-		console.log = function() {};
+	if (!devMode()) {
+		console.log = function () {};
 	}
+
+	// Mobile menu
+	const navigation = document.querySelector(".site-nav");
+	const buttonMobile = document.querySelector(".nav-mobile");
+
+	buttonMobile.addEventListener("click", () => {
+		navigation.classList.toggle("open");
+	});
 });
