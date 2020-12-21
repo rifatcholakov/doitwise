@@ -5302,9 +5302,25 @@ readers do not read off random characters that represent icons */
   .section-intro .button-primary,
   .section-intro .button-primary-light {
     margin-right: 0.5625em; }
-  @media all and (max-width: 960px) {
-    .section-intro .section-intro {
-      background-image: none !important; } }
+  @media all and (max-width: 1200px) {
+    .section-intro {
+      background-image: none !important;
+      text-align: center; }
+    .section-intro .copy {
+      max-width: none;
+      padding: 20px; } }
+  @media all and (max-width: 640px) {
+    .section-intro .copy-text {
+      font-size: 3em; }
+    .section-intro .ctl {
+      display: flex;
+      flex-direction: column; }
+    .section-intro .button {
+      width: 100%;
+      margin-bottom: 1em; } }
+  @media all and (max-width: 480px) {
+    .section-intro .copy-text {
+      font-size: 2.3em; } }
 
 .section-core-solutions .button-ghost .fa-arrow-right {
   color: #000;
@@ -5323,6 +5339,11 @@ readers do not read off random characters that represent icons */
   .section-heading .heading-description {
     color: #1e3158;
     font-weight: 500; }
+  @media all and (max-width: 640px) {
+    .section-heading {
+      flex-direction: column; }
+      .section-heading .heading-primary {
+        margin-bottom: 1em; } }
 
 .box-featured {
   margin-bottom: 1.75em;
@@ -5373,6 +5394,9 @@ readers do not read off random characters that represent icons */
       color: rgba(255, 255, 255, 0.8); }
     .box-featured .meta-description {
       color: rgba(255, 255, 255, 0.8); }
+    @media all and (max-width: 640px) {
+      .box-featured .meta-title {
+        font-size: 3.5em; } }
   .box-featured-content {
     padding: 3rem;
     border: 1px solid #dddddd;
@@ -5387,6 +5411,9 @@ readers do not read off random characters that represent icons */
     display: flex;
     flex-direction: column;
     align-items: stretch; }
+    @media all and (max-width: 640px) {
+      .box-featured-content {
+        text-align: center; } }
   .box-featured-title {
     font-size: 2em;
     font-weight: 700;
@@ -5395,7 +5422,10 @@ readers do not read off random characters that represent icons */
   .box-featured-description {
     flex: 1 1 auto; }
   .box-featured .button {
-    max-width: 9em; }
+    align-self: flex-start; }
+    @media all and (max-width: 640px) {
+      .box-featured .button {
+        width: 100%; } }
 
 .box-mini {
   border: 1px solid #dddddd;
@@ -5403,7 +5433,9 @@ readers do not read off random characters that represent icons */
   border-radius: 0.625em;
   padding: 1.625em 2em; }
   .box-mini-header {
-    color: #1e3158; }
+    color: #1e3158;
+    display: flex;
+    align-items: baseline; }
     .box-mini-header .heading-icon {
       margin-right: 1.125em; }
     .box-mini-header .heading-title {
