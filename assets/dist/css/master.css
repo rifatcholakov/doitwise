@@ -5343,7 +5343,8 @@ readers do not read off random characters that represent icons */
     .section-heading {
       flex-direction: column; }
       .section-heading .heading-primary {
-        margin-bottom: 1em; } }
+        margin-bottom: 1em;
+        text-align: center; } }
 
 .box-featured {
   margin-bottom: 1.75em;
