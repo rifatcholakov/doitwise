@@ -5223,7 +5223,11 @@ readers do not read off random characters that represent icons */
   .open {
     display: flex; }
   .overflow {
-    overflow: hidden; } }
+    overflow: hidden; }
+  .section-intro {
+    background-image: none !important; }
+  .box-mini {
+    margin: 0.25em; } }
 
 .button {
   border-radius: 0.313em;

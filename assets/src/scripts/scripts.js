@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-	"use strict";
+	("use strict");
 
 	/*
 	|--------------------------------------------------------------------------
@@ -20,7 +20,9 @@ jQuery(document).ready(function ($) {
 		console.log = function () {};
 	}
 
+	// -----------------
 	// Mobile menu
+	// -----------------
 	const navigation = document.querySelector(".site-nav");
 	const buttonMobile = document.querySelector(".nav-mobile");
 	const buttonMobileIcon = document.querySelector(".nav-mobile > i");
@@ -31,4 +33,5 @@ jQuery(document).ready(function ($) {
 		buttonMobileIcon.classList.toggle("fa-times");
 		document.querySelector("body").classList.toggle("overflow");
 	});
+	// -----------------
 });
