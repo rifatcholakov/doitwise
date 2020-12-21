@@ -114,7 +114,7 @@
 	.nav-main-item a,
 	.nav-side-item a {
 		display: block;
-		padding: $global-layout-gutter / 2;
+		padding: $global-layout-gutter;
 	}
 
 	.nav-side-item:first-child {
@@ -122,8 +122,9 @@
 	}
 
 	.nav-side .button {
-		margin: $global-layout-gutter / 2;
+		margin: 0 $global-layout-gutter;
 		margin-bottom: 1.5em;
+		text-align: center;
 	}
 
 	.open {
@@ -132,13 +133,5 @@
 
 	.overflow {
 		overflow: hidden;
-	}
-
-	.section-intro {
-		background-image: none !important;
-	}
-
-	.box-mini {
-		margin: 0.25em;
 	}
 }

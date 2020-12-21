@@ -82,6 +82,12 @@
 	.button-primary-light {
 		margin-right: 0.5625em;
 	}
+
+	@media all and (max-width: $breakpoint-medium) {
+		.section-intro {
+			background-image: none !important;
+		}
+	}
 }
 
 .section-core-solutions {
