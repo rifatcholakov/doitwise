@@ -5172,6 +5172,9 @@ readers do not read off random characters that represent icons */
   display: flex;
   align-items: center; }
 
+.nav .close {
+  display: none; }
+
 @media all and (max-width: 960px) {
   .site-header {
     position: relative; }
@@ -5217,7 +5220,9 @@ readers do not read off random characters that represent icons */
   .nav-side .button {
     margin: 10px; }
   .open {
-    display: flex; } }
+    display: flex; }
+  .close {
+    display: block; } }
 
 .button {
   border-radius: 0.313em;

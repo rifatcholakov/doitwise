@@ -23,8 +23,11 @@ jQuery(document).ready(function ($) {
 	// Mobile menu
 	const navigation = document.querySelector(".site-nav");
 	const buttonMobile = document.querySelector(".nav-mobile");
+	const buttonMobileIcon = document.querySelector(".nav-mobile > i");
 
 	buttonMobile.addEventListener("click", () => {
 		navigation.classList.toggle("open");
+		buttonMobileIcon.classList.toggle("fa-bars");
+		buttonMobileIcon.classList.toggle("fa-times");
 	});
 });
