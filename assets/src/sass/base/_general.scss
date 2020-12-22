@@ -95,6 +95,7 @@ img {
 .sticky {
 	display: block;
 }
+
 .bypostauthor {
 	display: block;
 }
@@ -151,8 +152,8 @@ ul {
 }
 
 // Do not show the outline on the skip link target.
+// sass-lint:disable-all
 #content[tabindex="-1"]:focus {
-	// sass-lint:disable-line no-ids
 	outline: 0;
 }
 

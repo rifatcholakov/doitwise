@@ -4,15 +4,16 @@
 	align-items: center;
 	width: 100%;
 	margin-bottom: 3em;
+	color: $color-secondary;
 
 	.heading-title {
 		font-weight: 700;
 		font-size: 2em;
-		color: $color-secondary;
+		color: inherit;
 	}
 
 	.heading-description {
-		color: $color-secondary;
+		color: inherit;
 		font-weight: 500;
 	}
 
@@ -20,26 +21,28 @@
 		flex-direction: column;
 
 		.heading-primary {
-			margin-bottom: 1em;
 			text-align: center;
+		}
+
+		.heading-secondary {
+			margin-top: 1em;
 		}
 	}
 }
 
 .box-featured {
-	$margin: 1.75em;
+	$box-spacing: 1.75em;
 
-	margin-bottom: $margin;
+	margin-bottom: $box-spacing;
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
-	height: calc(100% - #{$margin});
+	height: calc(100% - #{$box-spacing});
 
 	&-visual {
 		position: relative;
 		border-radius: 0.625em 0.625em 0px 0px;
 		overflow: hidden;
-		position: relative;
 
 		img {
 			position: absolute;
@@ -55,19 +58,16 @@
 			width: 100%;
 			height: 100%;
 			background: linear-gradient(
-				270deg,
+				90deg,
 				$color-secondary 39.55%,
 				rgba(35, 54, 92, 0) 100%
 			);
 			opacity: 0.9;
-			transform: matrix(-1, 0, 0, 1, 0, 0);
 		}
 	}
 
 	.meta {
 		position: relative;
-		top: 0;
-		left: 0;
 		color: #fff;
 		padding: 3.5em 3em;
 
@@ -75,7 +75,6 @@
 		&-link,
 		&-description {
 			display: block;
-			color: #fff;
 		}
 
 		&-title {
@@ -86,6 +85,7 @@
 		&-subtitle {
 			font-weight: 700;
 			font-size: 1.125em;
+			color: inherit;
 		}
 
 		&-link {
@@ -98,17 +98,11 @@
 		&-description {
 			color: rgba(255, 255, 255, 0.8);
 		}
-
-		@media all and (max-width: $breakpoint-small) {
-			&-title {
-				font-size: 3.5em;
-			}
-		}
 	}
 
 	&-content {
-		padding: 3rem;
-		border: 1px solid $color-tetra;
+		padding: 3em;
+		border: 1px solid $color-separator;
 		background: #fff;
 		box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.04);
 		border-bottom-left-radius: 0.625em;
@@ -120,12 +114,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: stretch;
-
-		@media all and (max-width: $breakpoint-small) {
-			& {
-				text-align: center;
-			}
-		}
 	}
 
 	&-title {
@@ -141,23 +129,31 @@
 
 	.button {
 		align-self: flex-start;
+	}
 
-		@media all and (max-width: $breakpoint-small) {
-			& {
-				width: 100%;
-			}
+	@media all and (max-width: $breakpoint-small) {
+		.meta-title {
+			font-size: 3.5em;
+		}
+
+		&-content {
+			text-align: center;
+		}
+
+		.button {
+			align-self: stretch;
 		}
 	}
 }
 
 .box-mini {
-	border: 1px solid $color-tetra;
+	border: 1px solid $color-separator;
 	box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.04);
 	border-radius: 0.625em;
 	padding: 1.625em 2em;
 
 	&-header {
-		color: #1e3158;
+		color: $color-secondary;
 		display: flex;
 		align-items: baseline;
 
@@ -181,7 +177,7 @@
 	&-link {
 		font-size: 0.875em;
 		font-weight: 700;
-		color: #e41c38;
+		color: $color-primary;
 
 		i {
 			margin-right: 0.5em;
@@ -189,14 +185,18 @@
 	}
 
 	@media all and (max-width: $breakpoint-large) {
-		& {
-			margin-bottom: $global-layout-gutter;
+		margin-bottom: $global-layout-gutter;
+
+		.columns:nth-last-child(2) & {
+			margin-bottom: 0;
 		}
 	}
 
 	@media all and (max-width: $breakpoint-medium) {
-		& {
-			margin: $global-layout-gutter 0;
+		margin-bottom: $global-layout-gutter 0;
+
+		.columns:last-child & {
+			margin-bottom: 0;
 		}
 	}
 }

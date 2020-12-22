@@ -14,7 +14,6 @@
 
 	&-primary {
 		background: $color-primary;
-		color: #fff;
 	}
 
 	&-secondary {
@@ -27,7 +26,7 @@
 	&-ghost {
 		color: $color-primary;
 		background: transparent;
-		border: 1px solid $color-tetra;
+		border: 1px solid $color-separator;
 		padding: 1em;
 	}
 

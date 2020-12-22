@@ -3,7 +3,7 @@
  * Default paddings are 40 and 80px
  */
 .section-fullwidth {
-	$border-color: #ddd;
+	$border-color: $color-separator;
 	$section-padding: 80px;
 
 	padding: #{$section-padding} 0;
@@ -15,11 +15,11 @@
 
 	// Default modifiers
 	&.border-bottom {
-		border-bottom: 1px solid #ddd;
+		border-bottom: 1px solid $color-separator;
 	}
 
 	&.border-top {
-		border-top: 1px solid #ddd;
+		border-top: 1px solid $color-separator;
 	}
 
 	&.shadow {
@@ -55,7 +55,7 @@
 }
 
 .section-intro {
-	border-bottom: 1px solid $color-tetra;
+	border-bottom: 1px solid $color-separator;
 	display: flex;
 	align-items: center;
 	min-height: 50em;
@@ -63,6 +63,7 @@
 	.row {
 		width: 100%;
 	}
+
 	.copy {
 		max-width: 45em;
 
@@ -84,10 +85,8 @@
 	}
 
 	@media all and (max-width: $breakpoint-large) {
-		& {
-			background-image: none !important;
-			text-align: center;
-		}
+		background-image: none !important; // sass-lint:disable-line no-important
+		text-align: center;
 
 		.copy {
 			max-width: none;
@@ -96,6 +95,12 @@
 	}
 
 	@media all and (max-width: $breakpoint-small) {
+		min-height: auto;
+
+		.copy {
+			padding: 0;
+		}
+
 		.copy-text {
 			font-size: 3em;
 		}
@@ -109,10 +114,6 @@
 			width: 100%;
 			margin-bottom: 1em;
 		}
-
-		// & {
-		// 	min-height: auto;
-		// }
 	}
 
 	@media all and (max-width: $breakpoint-mobile) {
