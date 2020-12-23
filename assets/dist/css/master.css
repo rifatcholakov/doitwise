@@ -5458,14 +5458,9 @@ readers do not read off random characters that represent icons */
     color: #e41c38; }
     .box-mini-link i {
       margin-right: 0.5em; }
-  @media all and (max-width: 75em) {
-    .box-mini {
-      margin-bottom: 1.875em; }
-      .columns:nth-last-child(2) .box-mini {
-        margin-bottom: 0; } }
   @media all and (max-width: 60em) {
     .box-mini {
-      margin-bottom: 1.875em 0; }
+      margin-bottom: 1.875em; }
       .columns:last-child .box-mini {
         margin-bottom: 0; } }
 
@@ -5510,6 +5505,15 @@ readers do not read off random characters that represent icons */
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, #ffffff 1.7%, rgba(255, 255, 255, 0) 100%); }
+  @media all and (max-width: 60em) {
+    .box-fullscreen .box-section:last-child {
+      flex-shrink: 1.06; } }
+  @media all and (max-width: 40em) {
+    .box-fullscreen .box-section:last-child {
+      display: none; }
+    .box-fullscreen .box-section:first-child .button {
+      align-self: stretch;
+      text-align: center; } }
 
 .box-simple {
   display: flex;
@@ -5518,16 +5522,27 @@ readers do not read off random characters that represent icons */
   border: 1px solid #dddddd;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
   border-radius: 0.625em;
-  padding: 2.5em 2.25em 2.25em 3.125em; }
+  padding: 2.5em 3.125em;
+  align-items: stretch;
+  height: 100%; }
   .box-simple .box-heading {
     color: #1e3158;
     font-weight: 700;
     font-size: 1.375em;
-    padding-bottom: 1.25em; }
+    padding-bottom: 1.25em;
+    flex: 1 1 auto; }
   .box-simple .box-content {
     color: #000;
-    padding-bottom: 2.875em; }
+    padding-bottom: 2.875em;
+    flex: 1 1 auto; }
   .box-simple .button {
-    text-align: center; }
+    text-align: center;
+    flex: 1 1 auto; }
+  @media all and (max-width: 60em) {
+    .box-simple {
+      margin-bottom: 1.875em;
+      height: auto; }
+      .columns:last-child > .box-simple {
+        margin-bottom: 0; } }
 
 /*# sourceMappingURL=master.css.map */
