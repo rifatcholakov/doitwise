@@ -1,3 +1,14 @@
+.heading-title {
+	font-weight: 700;
+	font-size: 2em;
+	color: inherit;
+}
+
+.heading-content {
+	color: inherit;
+	font-weight: 500;
+}
+
 .section-heading {
 	display: flex;
 	justify-content: space-between;
@@ -5,17 +16,6 @@
 	width: 100%;
 	margin-bottom: 3em;
 	color: $color-secondary;
-
-	.heading-title {
-		font-weight: 700;
-		font-size: 2em;
-		color: inherit;
-	}
-
-	.heading-description {
-		color: inherit;
-		font-weight: 500;
-	}
 
 	@media all and (max-width: $breakpoint-small) {
 		flex-direction: column;
@@ -184,6 +184,10 @@
 		}
 	}
 
+	@media all and (max-width: $breakpoint-large) {
+		margin-bottom: $global-layout-gutter;
+	}
+
 	@media all and (max-width: $breakpoint-medium) {
 		margin-bottom: $global-layout-gutter;
 
@@ -307,15 +311,149 @@
 
 	.button {
 		text-align: center;
-		flex: 1 1 auto;
 	}
 
 	@media all and (max-width: $breakpoint-medium) {
 		margin-bottom: $global-layout-gutter;
+		padding: 1.25em 1.563em;
 		height: auto;
 
 		.columns:last-child > & {
 			margin-bottom: 0;
+		}
+	}
+
+	// This is a special case
+	@media all and (min-width: 868px) and (max-width: $breakpoint-medium) {
+		height: 100%;
+	}
+}
+
+.box-partners {
+	padding: 3.5em 5em;
+	display: flex;
+	background: $color-box-trust;
+	border-radius: 0.625em;
+	color: #fff;
+
+	.box-primary {
+		flex-direction: row;
+		align-items: flex-start;
+	}
+
+	.box-secondary {
+		flex: 1 0 30em;
+		justify-content: space-evenly;
+		display: flex;
+		align-items: center;
+
+		img {
+			display: block;
+		}
+	}
+
+	.heading-title {
+		color: inherit;
+		margin-bottom: 0.875em;
+	}
+
+	.heading-content {
+		color: inherit;
+		margin-bottom: 2em;
+		font-size: 1.25em;
+		font-weight: 400;
+	}
+
+	.button-inline {
+		margin-right: 2em;
+	}
+
+	@media all and (max-width: $breakpoint-large) {
+		text-align: center;
+		flex-direction: column;
+
+		.box-secondary {
+			flex: 0 0 0;
+			justify-content: center;
+			margin-top: 1.5em;
+
+			img {
+				margin-right: 0.5em;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	@media all and (max-width: $breakpoint-small) {
+		.heading-ctas {
+			.button-inline {
+				margin-right: 0.5em;
+			}
+		}
+	}
+
+	@media all and (max-width: $breakpoint-mobile) {
+		$gutter-mobile: 0.125em;
+
+		.heading-ctas {
+			.button-inline {
+				display: block;
+			}
+		}
+
+		.box-secondary {
+			img {
+				margin: $gutter-mobile;
+				display: block;
+				width: calc(100% / 3 - #{$gutter-mobile});
+			}
+		}
+	}
+}
+
+.box-testimonial {
+	box-shadow: 0 0.875em 2.5em -0.938em rgba(0, 0, 0, 0.25);
+	border-radius: 0.625em;
+
+	.box-primary {
+		background: #ffffff;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 1.75em 3.125em;
+		object-fit: contain;
+		border-bottom: 1px solid $color-separator;
+	}
+
+	.box-secondary {
+		background: #ffffff;
+		padding: 2.25em 3.125em 0 3.125em;
+	}
+
+	.tetimonial-image {
+		margin-right: 1em;
+		margin-bottom: 0;
+		object-fit: contain;
+		height: auto;
+	}
+
+	.user-name {
+		font-size: 1.125em;
+		font-weight: 700;
+	}
+
+	.user-additionalInfo {
+		font-size: 0.875em;
+		color: $color-minor;
+		margin-top: 0;
+	}
+
+	.testimonial {
+		p {
+			color: #000;
 		}
 	}
 }

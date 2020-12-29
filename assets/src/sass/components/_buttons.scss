@@ -12,6 +12,14 @@
 		cursor: pointer;
 	}
 
+	&-inline {
+		padding: 0;
+		color: #fff;
+		// text-decoration: underline;
+		border-radius: 0;
+		text-decoration: underline;
+	}
+
 	&-primary {
 		background: $color-primary;
 

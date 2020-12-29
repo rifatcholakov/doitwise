@@ -5238,6 +5238,11 @@ readers do not read off random characters that represent icons */
   display: inline-block; }
   .button:hover {
     cursor: pointer; }
+  .button-inline {
+    padding: 0;
+    color: #fff;
+    border-radius: 0;
+    text-decoration: underline; }
   .button-primary {
     background: #e41c38; }
     .button-primary-light {
@@ -5289,6 +5294,9 @@ readers do not read off random characters that represent icons */
     .section-fullwidth.text-white a {
       color: white; }
 
+.section-fullwidth:not(.section-border-bottom):not(.section-borders):not(.section-offcanvas-images) + :not(.section-border-top):not(.section-borders):not(.section-statistics):not(.section-offcanvas-images) {
+  padding-top: 0; }
+
 .section-intro {
   border-bottom: 1px solid #dddddd;
   display: flex;
@@ -5336,6 +5344,59 @@ readers do not read off random characters that represent icons */
   color: #000;
   margin-left: 1em; }
 
+.section-our-services {
+  background: linear-gradient(0deg, #f4f4f4 0%, rgba(244, 244, 244, 0) 100%); }
+
+.section-contact {
+  text-align: center; }
+  .section-contact .section-heading {
+    display: flex;
+    flex-direction: column; }
+  .section-contact .heading-title {
+    font-size: 3.5em;
+    color: #1e3158; }
+  .section-contact .heading-content {
+    color: #1e3158;
+    margin-top: 1em; }
+  .section-contact .heading-secondary {
+    margin-top: 2.75em; }
+  .section-contact .heading-ctas .button {
+    width: 100%; }
+  .section-contact .heading-links {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between; }
+    .section-contact .heading-links a {
+      margin: 0 2.625em;
+      color: #e41c38;
+      text-decoration: underline; }
+      .section-contact .heading-links a:first-child {
+        margin-left: 0; }
+      .section-contact .heading-links a:last-child {
+        margin-right: 0; }
+  @media all and (max-width: 40em) {
+    .section-contact .section-heading .heading-secondary {
+      margin-top: 2.75em; } }
+  @media all and (max-width: 30em) {
+    .section-contact .heading-title {
+      font-size: 2.5em; }
+    .section-contact .heading-links a {
+      margin: 0; } }
+
+.section-testimonials {
+  background: #f7f7f7; }
+  .section-testimonials .box-testimonial {
+    margin-top: -7.7em; }
+
+.heading-title {
+  font-weight: 700;
+  font-size: 2em;
+  color: inherit; }
+
+.heading-content {
+  color: inherit;
+  font-weight: 500; }
+
 .section-heading {
   display: flex;
   justify-content: space-between;
@@ -5343,13 +5404,6 @@ readers do not read off random characters that represent icons */
   width: 100%;
   margin-bottom: 3em;
   color: #1e3158; }
-  .section-heading .heading-title {
-    font-weight: 700;
-    font-size: 2em;
-    color: inherit; }
-  .section-heading .heading-description {
-    color: inherit;
-    font-weight: 500; }
   @media all and (max-width: 40em) {
     .section-heading {
       flex-direction: column; }
@@ -5458,6 +5512,9 @@ readers do not read off random characters that represent icons */
     color: #e41c38; }
     .box-mini-link i {
       margin-right: 0.5em; }
+  @media all and (max-width: 75em) {
+    .box-mini {
+      margin-bottom: 1.875em; } }
   @media all and (max-width: 60em) {
     .box-mini {
       margin-bottom: 1.875em; }
@@ -5536,13 +5593,96 @@ readers do not read off random characters that represent icons */
     padding-bottom: 2.875em;
     flex: 1 1 auto; }
   .box-simple .button {
-    text-align: center;
-    flex: 1 1 auto; }
+    text-align: center; }
   @media all and (max-width: 60em) {
     .box-simple {
       margin-bottom: 1.875em;
+      padding: 1.25em 1.563em;
       height: auto; }
       .columns:last-child > .box-simple {
         margin-bottom: 0; } }
+  @media all and (min-width: 868px) and (max-width: 60em) {
+    .box-simple {
+      height: 100%; } }
+
+.box-partners {
+  padding: 3.5em 5em;
+  display: flex;
+  background: #81b5a1;
+  border-radius: 0.625em;
+  color: #fff; }
+  .box-partners .box-primary {
+    flex-direction: row;
+    align-items: flex-start; }
+  .box-partners .box-secondary {
+    flex: 1 0 30em;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center; }
+    .box-partners .box-secondary img {
+      display: block; }
+  .box-partners .heading-title {
+    color: inherit;
+    margin-bottom: 0.875em; }
+  .box-partners .heading-content {
+    color: inherit;
+    margin-bottom: 2em;
+    font-size: 1.25em;
+    font-weight: 400; }
+  .box-partners .button-inline {
+    margin-right: 2em; }
+  @media all and (max-width: 75em) {
+    .box-partners {
+      text-align: center;
+      flex-direction: column; }
+      .box-partners .box-secondary {
+        flex: 0 0 0;
+        justify-content: center;
+        margin-top: 1.5em; }
+        .box-partners .box-secondary img {
+          margin-right: 0.5em; }
+          .box-partners .box-secondary img:last-child {
+            margin-right: 0; } }
+  @media all and (max-width: 40em) {
+    .box-partners .heading-ctas .button-inline {
+      margin-right: 0.5em; } }
+  @media all and (max-width: 30em) {
+    .box-partners .heading-ctas .button-inline {
+      display: block; }
+    .box-partners .box-secondary img {
+      margin: 0.125em;
+      display: block;
+      width: calc(100% / 3 - 0.125em); } }
+
+.box-testimonial {
+  box-shadow: 0 0.875em 2.5em -0.938em rgba(0, 0, 0, 0.25);
+  border-radius: 0.625em; }
+  .box-testimonial .box-primary {
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.75em 3.125em;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-bottom: 1px solid #dddddd; }
+  .box-testimonial .box-secondary {
+    background: #ffffff;
+    padding: 2.25em 3.125em 0 3.125em; }
+  .box-testimonial .tetimonial-image {
+    margin-right: 1em;
+    margin-bottom: 0;
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: auto; }
+  .box-testimonial .user-name {
+    font-size: 1.125em;
+    font-weight: 700; }
+  .box-testimonial .user-additionalInfo {
+    font-size: 0.875em;
+    color: #7b7b7b;
+    margin-top: 0; }
+  .box-testimonial .testimonial p {
+    color: #000; }
 
 /*# sourceMappingURL=master.css.map */
