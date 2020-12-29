@@ -54,6 +54,10 @@
 	}
 }
 
+.section-border-bottom {
+	border-bottom: 1px solid $color-separator;
+}
+
 .section {
 	&-fullwidth:not(.section-border-bottom):not(.section-borders):not(.section-offcanvas-images)
 		+ :not(.section-border-top):not(.section-borders):not(.section-statistics):not(.section-offcanvas-images) {
@@ -62,7 +66,6 @@
 }
 
 .section-intro {
-	border-bottom: 1px solid $color-separator;
 	display: flex;
 	align-items: center;
 	min-height: 50em;
@@ -209,9 +212,17 @@
 }
 
 .section-testimonials {
+	margin-top: 7.7em;
+
 	background: #f7f7f7;
 
 	.box-testimonial {
 		margin-top: -7.7em;
+	}
+
+	@media all and (max-width: 1023px) {
+		.columns:not(:first-child) .box-testimonial {
+			margin-top: $global-layout-gutter / 2;
+		}
 	}
 }
