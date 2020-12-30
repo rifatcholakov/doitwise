@@ -5399,6 +5399,35 @@ readers do not read off random characters that represent icons */
     .section-testimonials .columns:not(:first-child) .box-testimonial {
       margin-top: 0.9375em; } }
 
+.section-two-columns .columns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.section-two-columns .heading-title {
+  margin-bottom: 0.875em;
+  color: #1e3158; }
+
+.section-two-columns .column-content {
+  margin-bottom: 2.5em; }
+
+.section-two-columns .column-ctas {
+  white-space: nowrap; }
+  .section-two-columns .column-ctas a {
+    margin-right: 0.625em; }
+    .section-two-columns .column-ctas a:last-of-type {
+      margin-right: 0; }
+
+.section-two-columns .column-image {
+  border-radius: 0.625em;
+  width: 100%; }
+
+@media all and (max-width: 60em) {
+  .section-two-columns .columns {
+    margin-top: 1.875em; }
+    .section-two-columns .columns:first-child {
+      margin-top: 0; } }
+
 .heading-title {
   font-weight: 700;
   font-size: 2em;
@@ -5407,6 +5436,11 @@ readers do not read off random characters that represent icons */
 .heading-content {
   color: inherit;
   font-weight: 500; }
+
+.column-content {
+  font-weight: 400;
+  font-size: 1.25em;
+  color: #000; }
 
 .section-heading {
   display: flex;
@@ -5703,5 +5737,18 @@ readers do not read off random characters that represent icons */
     font-style: normal; }
     .box-testimonial .testimonial-quote p {
       color: #000; }
+
+.tab-menu-item {
+  display: inline-block;
+  margin-right: 2em; }
+  .tab-menu-item a {
+    color: #e41c38;
+    opacity: 50%;
+    font-weight: 700;
+    font-size: 1.25em; }
+
+.tab-menu .item-active {
+  opacity: 100%;
+  border-bottom: 3px solid #e41c38; }
 
 /*# sourceMappingURL=master.css.map */

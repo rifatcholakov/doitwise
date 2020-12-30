@@ -34,4 +34,30 @@ jQuery(document).ready(function ($) {
 		document.querySelector("body").classList.toggle("overflow");
 	});
 	// -----------------
+
+	// -----------------
+	// Tab menu
+	// -----------------
+	const tabMenuItems = [...document.querySelectorAll(".tab-menu-item > a")];
+
+	tabMenuItems.map((item) => {
+		item.addEventListener("click", (e) => {
+			let currentlyAcctive;
+
+			tabMenuItems.map((item) => {
+				if (item.classList.contains("item-active")) {
+					currentlyAcctive = item;
+				}
+			});
+			currentlyAcctive.classList.remove("item-active");
+
+			const pretendent = e.target;
+			pretendent.classList.add("item-active");
+
+			// Start to change the content
+			const tabContent = pretendent;
+			console.log(e.target.id);
+		});
+	});
+	// -----------------
 });

@@ -9,6 +9,12 @@
 	font-weight: 500;
 }
 
+.column-content {
+	font-weight: 400;
+	font-size: 1.25em;
+	color: #000;
+}
+
 .section-heading {
 	display: flex;
 	justify-content: space-between;
@@ -466,5 +472,24 @@
 		p {
 			color: #000;
 		}
+	}
+}
+
+.tab-menu {
+	&-item {
+		display: inline-block;
+		margin-right: 2em;
+
+		a {
+			color: $color-primary;
+			opacity: 50%;
+			font-weight: 700;
+			font-size: 1.25em;
+		}
+	}
+
+	.item-active {
+		opacity: 100%;
+		border-bottom: 3px solid $color-primary;
 	}
 }

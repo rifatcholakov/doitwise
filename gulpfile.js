@@ -62,13 +62,6 @@ gulp.task("sass", function () {
 		.pipe(autoprefixer())
 		.pipe(sourcemaps.write("./"))
 		.pipe(gulp.dest(paths.destination.css))
-		.pipe(
-			notify({
-				onLast: true,
-				title: "Sass compiled successfully.",
-				message: getFormatDate(),
-			})
-		)
 		.on("change", browserSync.reload);
 });
 
@@ -80,12 +73,6 @@ gulp.task("cssmin", function () {
 		.pipe(rename({ suffix: ".min" }))
 		.pipe(sourcemaps.write("./"))
 		.pipe(gulp.dest(paths.destination.css))
-		.pipe(
-			notify({
-				message: "Successfully minified master.min.css",
-				onLast: true,
-			})
-		)
 		.on("change", browserSync.reload);
 });
 
