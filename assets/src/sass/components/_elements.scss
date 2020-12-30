@@ -388,6 +388,8 @@
 	}
 
 	@media all and (max-width: $breakpoint-small) {
+		padding: 2em 2.5em;
+
 		.heading-ctas {
 			.button-inline {
 				margin-right: 0.5em;
@@ -401,6 +403,12 @@
 		.heading-ctas {
 			.button-inline {
 				display: block;
+				margin-right: 0;
+				margin-bottom: 0.5em;
+			}
+
+			.button-inline:last-child {
+				margin-bottom: 0;
 			}
 		}
 
@@ -415,25 +423,20 @@
 }
 
 .box-testimonial {
+	background: #ffffff;
+	box-shadow: 0 0.875em 2.5em -0.938em rgba(0, 0, 0, 0.25);
+	border-radius: 0.625em;
+
 	.box-primary {
-		background: #ffffff;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		padding: 1.75em 3.125em;
-		object-fit: contain;
 		border-bottom: 1px solid $color-separator;
-		border-top-right-radius: 0.625em;
-		border-top-left-radius: 0.625em;
-		box-shadow: 0 0.875em 2.5em -0.938em rgba(0, 0, 0, 0.25);
 	}
 
 	.box-secondary {
-		background: #ffffff;
 		padding: 2.25em 3.125em 3.5em 3.125em;
-		border-bottom-left-radius: 0.625em;
-		border-bottom-right-radius: 0.625em;
-		box-shadow: 0 0.875em 2.5em -0.938em rgba(0, 0, 0, 0.25);
 		background-image: url("/assets/dist/images/quotes.svg");
 		background-repeat: no-repeat;
 		background-position: 85% 90%;
@@ -442,22 +445,24 @@
 	.tetimonial-image {
 		margin-right: 1em;
 		margin-bottom: 0;
-		object-fit: contain;
+		object-fit: cover;
 		height: auto;
 	}
 
-	.user-name {
+	.author-name {
 		font-size: 1.125em;
 		font-weight: 700;
 	}
 
-	.user-additionalInfo {
+	.author-position {
 		font-size: 0.875em;
 		color: $color-minor;
 		margin-top: 0;
 	}
 
-	.testimonial {
+	.testimonial-quote {
+		font-style: normal;
+
 		p {
 			color: #000;
 		}

@@ -5267,11 +5267,11 @@ readers do not read off random characters that represent icons */
  * Default paddings are 40 and 80px
  */
 .section-fullwidth {
-  padding: 80px 0;
+  padding: 5rem 0;
   position: relative; }
   @media (min-width: 40em) {
     .section-fullwidth {
-      padding: 80px 0; } }
+      padding: 5rem 0; } }
   .section-fullwidth.border-bottom {
     border-bottom: 1px solid #dddddd; }
   .section-fullwidth.border-top {
@@ -5293,6 +5293,9 @@ readers do not read off random characters that represent icons */
       background-color: rgba(255, 255, 255, 0.2); }
     .section-fullwidth.text-white a {
       color: white; }
+  @media all and (max-width: 40em) {
+    .section-fullwidth {
+      padding: 2.5rem 0; } }
 
 .section-border-bottom {
   border-bottom: 1px solid #dddddd; }
@@ -5337,7 +5340,9 @@ readers do not read off random characters that represent icons */
         flex-direction: column; }
       .section-intro .button {
         width: 100%;
-        margin-bottom: 1em; } }
+        margin-bottom: 1em; }
+      .section-intro .copy-ctl {
+        margin-top: 3.5em; } }
   @media all and (max-width: 30em) {
     .section-intro .copy-text {
       font-size: 2.3em; } }
@@ -5650,56 +5655,53 @@ readers do not read off random characters that represent icons */
           .box-partners .box-secondary img:last-child {
             margin-right: 0; } }
   @media all and (max-width: 40em) {
-    .box-partners .heading-ctas .button-inline {
-      margin-right: 0.5em; } }
+    .box-partners {
+      padding: 2em 2.5em; }
+      .box-partners .heading-ctas .button-inline {
+        margin-right: 0.5em; } }
   @media all and (max-width: 30em) {
     .box-partners .heading-ctas .button-inline {
-      display: block; }
+      display: block;
+      margin-right: 0;
+      margin-bottom: 0.5em; }
+    .box-partners .heading-ctas .button-inline:last-child {
+      margin-bottom: 0; }
     .box-partners .box-secondary img {
       margin: 0.125em;
       display: block;
       width: calc(100% / 3 - 0.125em); } }
 
-.box-testimonial .box-primary {
+.box-testimonial {
   background: #ffffff;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 1.75em 3.125em;
-  -o-object-fit: contain;
-     object-fit: contain;
-  border-bottom: 1px solid #dddddd;
-  border-top-right-radius: 0.625em;
-  border-top-left-radius: 0.625em;
-  box-shadow: 0 0.875em 2.5em -0.938em rgba(0, 0, 0, 0.25); }
-
-.box-testimonial .box-secondary {
-  background: #ffffff;
-  padding: 2.25em 3.125em 3.5em 3.125em;
-  border-bottom-left-radius: 0.625em;
-  border-bottom-right-radius: 0.625em;
   box-shadow: 0 0.875em 2.5em -0.938em rgba(0, 0, 0, 0.25);
-  background-image: url("/assets/dist/images/quotes.svg");
-  background-repeat: no-repeat;
-  background-position: 85% 90%; }
-
-.box-testimonial .tetimonial-image {
-  margin-right: 1em;
-  margin-bottom: 0;
-  -o-object-fit: contain;
-     object-fit: contain;
-  height: auto; }
-
-.box-testimonial .user-name {
-  font-size: 1.125em;
-  font-weight: 700; }
-
-.box-testimonial .user-additionalInfo {
-  font-size: 0.875em;
-  color: #7b7b7b;
-  margin-top: 0; }
-
-.box-testimonial .testimonial p {
-  color: #000; }
+  border-radius: 0.625em; }
+  .box-testimonial .box-primary {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.75em 3.125em;
+    border-bottom: 1px solid #dddddd; }
+  .box-testimonial .box-secondary {
+    padding: 2.25em 3.125em 3.5em 3.125em;
+    background-image: url("/assets/dist/images/quotes.svg");
+    background-repeat: no-repeat;
+    background-position: 85% 90%; }
+  .box-testimonial .tetimonial-image {
+    margin-right: 1em;
+    margin-bottom: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: auto; }
+  .box-testimonial .author-name {
+    font-size: 1.125em;
+    font-weight: 700; }
+  .box-testimonial .author-position {
+    font-size: 0.875em;
+    color: #7b7b7b;
+    margin-top: 0; }
+  .box-testimonial .testimonial-quote {
+    font-style: normal; }
+    .box-testimonial .testimonial-quote p {
+      color: #000; }
 
 /*# sourceMappingURL=master.css.map */
