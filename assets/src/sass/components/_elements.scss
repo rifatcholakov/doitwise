@@ -493,3 +493,11 @@
 		border-bottom: 3px solid $color-primary;
 	}
 }
+
+.tab-panel {
+	display: none;
+}
+
+.panel-active {
+	display: block;
+}

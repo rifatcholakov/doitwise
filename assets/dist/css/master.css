@@ -228,6 +228,9 @@ table {
   margin: 0 0 1.5em;
   width: 100%; }
 
+a:hover {
+  cursor: pointer; }
+
 html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased; }
@@ -5750,5 +5753,11 @@ readers do not read off random characters that represent icons */
 .tab-menu .item-active {
   opacity: 100%;
   border-bottom: 3px solid #e41c38; }
+
+.tab-panel {
+  display: none; }
+
+.panel-active {
+  display: block; }
 
 /*# sourceMappingURL=master.css.map */

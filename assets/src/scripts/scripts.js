@@ -38,26 +38,47 @@ jQuery(document).ready(function ($) {
 	// -----------------
 	// Tab menu
 	// -----------------
-	const tabMenuItems = [...document.querySelectorAll(".tab-menu-item > a")];
+	let tabMenuNames = document.querySelectorAll("[data-tabmenu-name]");
+	tabMenuNames = [...tabMenuNames].map(
+		(tabMenu) => tabMenu.dataset.tabmenuName
+	);
 
-	tabMenuItems.map((item) => {
-		item.addEventListener("click", (e) => {
-			let currentlyAcctive;
+	tabMenuNames.map((tabMenuName) => manageTabMenu(tabMenuName));
 
-			tabMenuItems.map((item) => {
-				if (item.classList.contains("item-active")) {
-					currentlyAcctive = item;
+	function manageTabMenu(menuName) {
+		const tabMenuItems = [
+			...document.querySelectorAll(
+				`[data-tabmenu-name="${menuName}"] .tab-menu-item > a`
+			),
+		];
+
+		const tabPanels = [
+			...document.querySelectorAll(
+				`[data-tabmenu-name="${menuName}"] .tab-panel`
+			),
+		];
+
+		function setActiveMenuItem(e) {
+			for (let i = 0; i < tabMenuItems.length; i++) {
+				// remove the class from all items and delete this if
+				// if (tabMenuItems[i].classList.contains("item-active")) {
+				// 	tabMenuItems[i].classList.toggle("item-active");
+				// 	tabPanels[i].classList.toggle("panel-active");
+				// }
+
+				tabMenuItems[i].classList.remove("item-active");
+				tabPanels[i].classList.remove("panel-active");
+
+				if (e.target === tabMenuItems[i]) {
+					tabMenuItems[i].classList.toggle("item-active");
+					tabPanels[i].classList.toggle("panel-active");
 				}
-			});
-			currentlyAcctive.classList.remove("item-active");
+			}
+		}
 
-			const pretendent = e.target;
-			pretendent.classList.add("item-active");
-
-			// Start to change the content
-			const tabContent = pretendent;
-			console.log(e.target.id);
-		});
-	});
+		for (let i = 0; i < tabMenuItems.length; i++) {
+			tabMenuItems[i].addEventListener("click", setActiveMenuItem);
+		}
+	}
 	// -----------------
 });
