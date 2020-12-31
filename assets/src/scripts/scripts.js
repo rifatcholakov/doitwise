@@ -20,9 +20,9 @@ jQuery(document).ready(function ($) {
 		console.log = function () {};
 	}
 
-	// -----------------
+	// ==================================================================
 	// Mobile menu
-	// -----------------
+	// ==================================================================
 	const navigation = document.querySelector(".site-nav");
 	const buttonMobile = document.querySelector(".nav-mobile");
 	const buttonMobileIcon = document.querySelector(".nav-mobile > i");
@@ -33,52 +33,49 @@ jQuery(document).ready(function ($) {
 		buttonMobileIcon.classList.toggle("fa-times");
 		document.querySelector("body").classList.toggle("overflow");
 	});
-	// -----------------
+	// ==================================================================
 
-	// -----------------
+	// ==================================================================
 	// Tab menu
-	// -----------------
-	let tabMenuNames = document.querySelectorAll("[data-tabmenu-name]");
-	tabMenuNames = [...tabMenuNames].map(
-		(tabMenu) => tabMenu.dataset.tabmenuName
+	// ==================================================================
+	let tabMenus = [...document.querySelectorAll("[data-tab-menu-name]")].map(
+		(tabMenu) => tabMenu.dataset.tabMenuName
 	);
 
-	tabMenuNames.map((tabMenuName) => manageTabMenu(tabMenuName));
+	tabMenus.map((tabMenu) => manageTabMenu(tabMenu));
 
 	function manageTabMenu(menuName) {
-		const tabMenuItems = [
+		const tabLinks = [
 			...document.querySelectorAll(
-				`[data-tabmenu-name="${menuName}"] .tab-menu-item > a`
+				`[data-tab-menu-name="${menuName}"] .tab-link`
 			),
 		];
 
 		const tabPanels = [
 			...document.querySelectorAll(
-				`[data-tabmenu-name="${menuName}"] .tab-panel`
+				`[data-tab-menu-name="${menuName}"] .tab-panel`
 			),
 		];
 
-		function setActiveMenuItem(e) {
-			for (let i = 0; i < tabMenuItems.length; i++) {
-				// remove the class from all items and delete this if
-				// if (tabMenuItems[i].classList.contains("item-active")) {
-				// 	tabMenuItems[i].classList.toggle("item-active");
-				// 	tabPanels[i].classList.toggle("panel-active");
-				// }
+		tabLinks.map((tabLink) =>
+			tabLink.addEventListener("click", (event) =>
+				setActiveTabAndPanel(event, tabLinks, tabPanels)
+			)
+		);
+	}
 
-				tabMenuItems[i].classList.remove("item-active");
-				tabPanels[i].classList.remove("panel-active");
+	function setActiveTabAndPanel(event, tabs, panels) {
+		const clickedTab = event.target;
 
-				if (e.target === tabMenuItems[i]) {
-					tabMenuItems[i].classList.toggle("item-active");
-					tabPanels[i].classList.toggle("panel-active");
-				}
+		for (let i = 0; i < tabs.length; i++) {
+			tabs[i].classList.remove("is-tab-link-active");
+			panels[i].classList.remove("is-tab-panel-active");
+
+			if (clickedTab === tabs[i]) {
+				tabs[i].classList.add("is-tab-link-active");
+				panels[i].classList.add("is-tab-panel-active");
 			}
 		}
-
-		for (let i = 0; i < tabMenuItems.length; i++) {
-			tabMenuItems[i].addEventListener("click", setActiveMenuItem);
-		}
 	}
-	// -----------------
+	// ==================================================================
 });

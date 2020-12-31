@@ -5421,10 +5421,6 @@ readers do not read off random characters that represent icons */
     .section-two-columns .column-ctas a:last-of-type {
       margin-right: 0; }
 
-.section-two-columns .column-image {
-  border-radius: 0.625em;
-  width: 100%; }
-
 @media all and (max-width: 60em) {
   .section-two-columns .columns {
     margin-top: 1.875em; }
@@ -5741,23 +5737,24 @@ readers do not read off random characters that represent icons */
     .box-testimonial .testimonial-quote p {
       color: #000; }
 
-.tab-menu-item {
+.tab-menu .tab-item {
   display: inline-block;
   margin-right: 2em; }
-  .tab-menu-item a {
-    color: #e41c38;
-    opacity: 50%;
-    font-weight: 700;
-    font-size: 1.25em; }
 
-.tab-menu .item-active {
+.tab-menu .tab-link {
+  color: #e41c38;
+  opacity: 50%;
+  font-weight: 700;
+  font-size: 1.25em; }
+
+.tab-menu .is-tab-link-active {
   opacity: 100%;
   border-bottom: 3px solid #e41c38; }
 
-.tab-panel {
+.tab-menu .tab-panel {
   display: none; }
 
-.panel-active {
+.tab-menu .is-tab-panel-active {
   display: block; }
 
 /*# sourceMappingURL=master.css.map */

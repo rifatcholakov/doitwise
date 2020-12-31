@@ -263,11 +263,6 @@
 		}
 	}
 
-	.column-image {
-		border-radius: 0.625em;
-		width: 100%;
-	}
-
 	@media all and (max-width: $breakpoint-medium) {
 		.columns {
 			margin-top: $global-layout-gutter;
