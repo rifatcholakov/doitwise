@@ -5414,18 +5414,54 @@ readers do not read off random characters that represent icons */
 .section-two-columns .column-content {
   margin-bottom: 2.5em; }
 
-.section-two-columns .column-ctas {
-  white-space: nowrap; }
-  .section-two-columns .column-ctas a {
-    margin-right: 0.625em; }
-    .section-two-columns .column-ctas a:last-of-type {
-      margin-right: 0; }
+.section-two-columns .column-ctas a {
+  margin-right: 0.625em; }
+  .section-two-columns .column-ctas a:last-of-type {
+    margin-right: 0; }
+  .section-two-columns .column-ctas a + a {
+    margin-top: 0.5em; }
 
 @media all and (max-width: 60em) {
   .section-two-columns .columns {
     margin-top: 1.875em; }
     .section-two-columns .columns:first-child {
       margin-top: 0; } }
+
+@media all and (max-width: 40em) {
+  .section-two-columns .column-ctas .button {
+    display: block;
+    text-align: center;
+    margin-right: 0; } }
+
+.section-tabs-menu .section-heading {
+  margin-bottom: 0; }
+
+.section-tabs-menu .tabs {
+  margin-bottom: 4em; }
+
+.section-tabs-menu .section-fullwidth {
+  padding-top: 0; }
+
+@media all and (max-width: 40em) {
+  .section-tabs-menu .tabs {
+    text-align: center; }
+  .section-tabs-menu .tab-item {
+    display: inline-block;
+    margin-top: 2em; } }
+
+.columns.items-spread {
+  justify-content: space-between; }
+
+.section-statistics {
+  background: #e41c38;
+  color: #fff;
+  text-align: center; }
+  .section-statistics .stats-title {
+    font-size: 3.5em;
+    font-weight: 700; }
+  @media all and (max-width: 40em) {
+    .section-statistics .stats-title {
+      font-size: 2em; } }
 
 .heading-title {
   font-weight: 700;
@@ -5737,17 +5773,18 @@ readers do not read off random characters that represent icons */
     .box-testimonial .testimonial-quote p {
       color: #000; }
 
-.tab-menu .tab-item {
+.tab-menu-controls .tab-item {
   display: inline-block;
   margin-right: 2em; }
 
-.tab-menu .tab-link {
+.tab-menu-controls .tab-link {
   color: #e41c38;
   opacity: 50%;
   font-weight: 700;
-  font-size: 1.25em; }
+  font-size: 1.25em;
+  padding-bottom: 0.5em; }
 
-.tab-menu .is-tab-link-active {
+.tab-menu-controls .is-tab-link-active {
   opacity: 100%;
   border-bottom: 3px solid #e41c38; }
 

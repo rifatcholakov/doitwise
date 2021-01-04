@@ -476,21 +476,24 @@
 }
 
 .tab-menu {
-	.tab-item {
-		display: inline-block;
-		margin-right: 2em;
-	}
+	&-controls {
+		.tab-item {
+			display: inline-block;
+			margin-right: 2em;
+		}
 
-	.tab-link {
-		color: $color-primary;
-		opacity: 50%;
-		font-weight: 700;
-		font-size: 1.25em;
-	}
+		.tab-link {
+			color: $color-primary;
+			opacity: 50%;
+			font-weight: 700;
+			font-size: 1.25em;
+			padding-bottom: 0.5em;
+		}
 
-	.is-tab-link-active {
-		opacity: 100%;
-		border-bottom: 3px solid $color-primary;
+		.is-tab-link-active {
+			opacity: 100%;
+			border-bottom: 3px solid $color-primary;
+		}
 	}
 
 	.tab-panel {

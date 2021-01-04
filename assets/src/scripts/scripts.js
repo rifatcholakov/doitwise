@@ -47,7 +47,7 @@ jQuery(document).ready(function ($) {
 	function manageTabMenu(menuName) {
 		const tabLinks = [
 			...document.querySelectorAll(
-				`[data-tab-menu-name="${menuName}"] .tab-link`
+				`[data-tab-menu-controls="${menuName}"] .tab-link`
 			),
 		];
 
